@@ -1,0 +1,128 @@
+/* Import a clean, modern variable font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-bg: #f9f7f1;
+  --color-primary: #00022a;
+  --color-accent: #00bcd4;
+  --color-text: #333333;
+
+  /* Typography */
+  --font-sans: 'Inter', Arial, Helvetica, sans-serif;
+  --text-base: 16px;
+  --text-large: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-xxl: 2rem;
+
+  /* Spacing & Sizing */
+  --radius: 8px;
+  --gap: 1rem;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: var(--text-xxl);
+  font-weight: 800;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Page Headings */
+.desc {
+  margin: var(--gap) var(--gap) 0;
+  color: var(--color-text);
+  font-size: var(--text-large);
+}
+.try {
+  margin: var(--gap) var(--gap) 0;
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Product Grid */
+.product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+/* Product Card */
+.product-card {
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-top {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xxl);
+  font-weight: 800;
+  padding: var(--gap);
+}
+.card-down {
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.price {
+  font-size: var(--text-large);
+  color: var(--color-primary);
+}
+
+/* Button Styling */
+.card-down input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+.card-down input[type="submit"]:hover {
+  background-color: #00a3b0;
+  transform: translateY(-2px);
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}

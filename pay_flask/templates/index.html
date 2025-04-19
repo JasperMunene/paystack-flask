@@ -23,7 +23,7 @@
             <div class="product-card">
                 <div class="card-top">{{ products[id].name }}</div>
                 <form class="card-down" method="POST" action="/order/{{ id }}">
-                    <div class="price">NGN {{ "{:.2f}".format(products[id].price/100) }}</div>
+                    <div class="price">KES {{ "{:.2f}".format(products[id].price/100) }}</div>
                     <input type="submit" value="Order Now">
                 </form>
             </div>
